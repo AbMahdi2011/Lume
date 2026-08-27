@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// 1. Struct Definition
+struct Player {
+    int id;
+    int score;
+};
+
+// 2. Function Definition
+fn calculate_bonus(int base_score, int multiplier): int {
+    return base_score * multiplier;
+}
+
+fn main(): int {
+    printf("=== Running Lume Program ===\n\n");
+
+    // 3. Struct Variable & Field Assignment
+    struct Player p;
+    p.id = 1;
+    p.score = 50;
+
+    // 4. Arrays & Function Calls
+    int scores[3];
+    scores[0] = p.score;
+    scores[1] = calculate_bonus(p.score, 2);
+    scores[2] = calculate_bonus(p.score, 3);
+
+    // 5. While Loop & If/Else Conditionals
+    int i = 0;
+    int total = 0;
+    while (i < 3) {
+        if (scores[i] >= 150) {
+            printf("Player %d Round %d: High Score = %d\n", p.id, i + 1, scores[i]);
+        } else {
+            printf("Player %d Round %d: Score      = %d\n", p.id, i + 1, scores[i]);
+        }
+        total = total + scores[i];
+        i = i + 1;
+    }
+
+    printf("\nTotal Cumulative Score: %d\n", total);
+    return 0;
+}

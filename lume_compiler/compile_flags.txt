@@ -1,0 +1,6 @@
+-I/usr/local/include
+-I/usr/include
+-I/home/mahdi/lume_compiler/include
+-Wall
+-Wno-missing-braces
+-D_DEFAULT_SOURCE
